@@ -58,10 +58,10 @@
     <Folder Include="Properties" />
     <Folder Include="Tables" />
     <Folder Include="Views" />
-    <Folder Include="Stores Procedures" />
     <Folder Include="Sequances" />
     <Folder Include="Functions" />
     <Folder Include="Triggers" />
+    <Folder Include="Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\BackupConfig.sql" />
@@ -69,5 +69,24 @@
     <Build Include="Tables\Login_History.sql" />
     <Build Include="Tables\RegistrationDetails.sql" />
     <Build Include="Tables\UserManagement.sql" />
+    <Build Include="Tables\CompanyMaster.sql" />
+    <Build Include="Tables\CountryMaster.sql" />
+    <Build Include="Tables\CustomerMaster.sql" />
+    <Build Include="Tables\EmployeeDetails.sql" />
+    <Build Include="Tables\ProductMaster.sql" />
+    <Build Include="Tables\StoreMaster.sql" />
+    <Build Include="Tables\SupplierMaster.sql" />
+    <Build Include="Tables\tblUserRights.sql" />
+    <Build Include="Tables\tblBarCodeSettings.sql" />
+    <Build Include="Tables\PurchaseInvoice.sql" />
+    <Build Include="Tables\PurchaseInvoiceDetails.sql" />
+    <Build Include="Tables\PostingDeliveryEntry.sql" />
+    <Build Include="Tables\SalesDetails.sql" />
+    <Build Include="Tables\SalesInvoiceDetails.sql" />
+    <Build Include="Stored Procedures\SPR_Delete_Company.sql" />
+    <Build Include="Stored Procedures\SPR_Get_Company.sql" />
+    <Build Include="Stored Procedures\SPR_Insert_Company.sql" />
+    <Build Include="Stored Procedures\SPR_Update_Company.sql" />
+    <Build Include="Stored Procedures\Get_Product_Master.sql" />
   </ItemGroup>
 </Project>
