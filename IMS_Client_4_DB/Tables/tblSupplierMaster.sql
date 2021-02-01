@@ -1,5 +1,5 @@
 
-CREATE TABLE [dbo].[SupplierMaster](
+CREATE TABLE [dbo].[tblSupplierMaster](
 	[SupplierID] [int] IDENTITY(1,1) NOT NULL,
 	[SupplierName] [nvarchar](50) NOT NULL,
 	[CountryID] [int] NOT NULL DEFAULT 0,

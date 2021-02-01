@@ -1,5 +1,5 @@
 
-CREATE TABLE [dbo].[Login_History](
+CREATE TABLE [dbo].[tblLogin_History](
 	[Login_History_ID] [bigint] IDENTITY(1,1) NOT NULL,
 	[UserID] [int] NOT NULL,
 	[UserName] [nvarchar](50) NOT NULL,

@@ -1,4 +1,4 @@
-CREATE TABLE [dbo].[PurchaseInvoice](
+CREATE TABLE [dbo].[tblPurchaseInvoice](
 	[PurchaseInvoiceID] [int] IDENTITY(1,1) NOT NULL,
 	[SupplierBillNo] [varchar](50) NULL,
 	[ShipmentNo] [varchar](50) NULL,

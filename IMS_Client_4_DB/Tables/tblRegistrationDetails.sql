@@ -1,5 +1,5 @@
 
-CREATE TABLE [dbo].[RegistrationDetails](
+CREATE TABLE [dbo].[tblRegistrationDetails](
 	[RegistrationID] [int] IDENTITY(1,1) NOT NULL,
 	[SoftKey] [varchar](max) NULL,
 	[RegDate] [date] NULL,

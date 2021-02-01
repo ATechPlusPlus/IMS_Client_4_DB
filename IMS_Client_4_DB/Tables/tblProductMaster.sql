@@ -1,4 +1,4 @@
-CREATE TABLE [dbo].[ProductMaster](
+CREATE TABLE [dbo].[tblProductMaster](
 	[ProductID] [int] IDENTITY(1,1) NOT NULL,
 	[ProductName] [nvarchar](50) NOT NULL,
 	[ProductArabicName] [nvarchar](100) NULL,

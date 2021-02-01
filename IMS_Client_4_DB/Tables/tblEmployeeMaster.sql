@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[EmployeeDetails](
+﻿CREATE TABLE [dbo].[tblEmployeeMaster](
 	[EmpID] [int] IDENTITY(1,1) NOT NULL,
 	[EmployeeCode] [nvarchar](50) NULL,
 	[Name] [nvarchar](50) NULL,
@@ -7,10 +7,10 @@
 	[DOB] [date] NULL,
 	[Address] [nvarchar](max) NULL,
 	[Photo] [varbinary](max) NULL,
-	[MonthlySalary] [decimal](18, 3) NULL CONSTRAINT [DF_EmployeeDetails_MonthlySalary]  DEFAULT ((0)),
+	[MonthlySalary] [decimal](18, 3) NULL CONSTRAINT [DF_EmployeeMaster_MonthlySalary]  DEFAULT ((0)),
 	[ActiveStatus] [bit] DEFAULT 1,
-	[CreatedBy] [int] NOT NULL CONSTRAINT [DF_EmployeeDetails_CreatedBy]  DEFAULT ((0)),
-	[CreatedOn] [datetime] NOT NULL CONSTRAINT [DF_EmployeeDetails_CreatedOn]  DEFAULT (getdate()),
+	[CreatedBy] [int] NOT NULL CONSTRAINT [DF_EmployeeMaster_CreatedBy]  DEFAULT ((0)),
+	[CreatedOn] [datetime] NOT NULL CONSTRAINT [DF_EmployeeMaster_CreatedOn]  DEFAULT (getdate()),
 	[UpdatedBy] [int] NULL,
 	[UpdatedOn] [datetime] NULL,
  CONSTRAINT [PK__Employee__AF2DBA7930B08991] PRIMARY KEY CLUSTERED 

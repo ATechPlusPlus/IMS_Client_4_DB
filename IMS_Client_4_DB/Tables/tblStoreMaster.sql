@@ -1,5 +1,5 @@
 
-CREATE TABLE [dbo].[StoreMaster](
+CREATE TABLE [dbo].[tblStoreMaster](
 	[StoreID] [int] IDENTITY(1,1) NOT NULL,
 	[StoreName] [nvarchar](50) NOT NULL,
 	[StoreCategory] [int] NULL,

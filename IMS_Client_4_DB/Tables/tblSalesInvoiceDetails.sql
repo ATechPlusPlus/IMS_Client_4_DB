@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[SalesInvoiceDetails]
+﻿CREATE TABLE [dbo].[tblSalesInvoiceDetails]
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
     [InvoiceNumber] NVARCHAR(50) NOT NULL, 

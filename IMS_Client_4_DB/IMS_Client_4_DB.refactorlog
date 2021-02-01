@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="b59c0fd7-0810-4396-b9af-477649263798" ChangeDateTime="01/30/2021 15:50:10">
+    <Property Name="ElementName" Value="[dbo].[tblMerchandiser_Account].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblMerchandiser_Account]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MerchandiserID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="94caa637-9976-4421-a933-258afda453d2" ChangeDateTime="01/30/2021 15:51:31">
+    <Property Name="ElementName" Value="[dbo].[tblMerchandiser_Account].[CreatedON]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblMerchandiser_Account]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CreatedOn" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="bea3134a-0a5a-4e91-b5a7-1728f3c10746" ChangeDateTime="01/30/2021 15:52:47">
+    <Property Name="ElementName" Value="[dbo].[tblMerchandiser_Account].[MerchandiserID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblMerchandiser_Account]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="  Merchandiser_AccountID" />
+  </Operation>
+</Operations>

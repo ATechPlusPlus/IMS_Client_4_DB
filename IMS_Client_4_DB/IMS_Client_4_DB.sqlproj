@@ -66,27 +66,36 @@
   <ItemGroup>
     <Build Include="Tables\BackupConfig.sql" />
     <Build Include="Tables\ERROR_Log.sql" />
-    <Build Include="Tables\Login_History.sql" />
-    <Build Include="Tables\RegistrationDetails.sql" />
+    <Build Include="Tables\tblLogin_History.sql" />
+    <Build Include="Tables\tblRegistrationDetails.sql" />
     <Build Include="Tables\UserManagement.sql" />
-    <Build Include="Tables\CompanyMaster.sql" />
-    <Build Include="Tables\CountryMaster.sql" />
-    <Build Include="Tables\CustomerMaster.sql" />
-    <Build Include="Tables\EmployeeDetails.sql" />
-    <Build Include="Tables\ProductMaster.sql" />
-    <Build Include="Tables\StoreMaster.sql" />
-    <Build Include="Tables\SupplierMaster.sql" />
+    <Build Include="Tables\tblCompanyMaster.sql" />
+    <Build Include="Tables\tblCountryMaster.sql" />
+    <Build Include="Tables\tblCustomerMaster.sql" />
+    <Build Include="Tables\tblEmployeeMaster.sql" />
+    <Build Include="Tables\tblProductMaster.sql" />
+    <Build Include="Tables\tblStoreMaster.sql" />
+    <Build Include="Tables\tblSupplierMaster.sql" />
     <Build Include="Tables\tblUserRights.sql" />
     <Build Include="Tables\tblBarCodeSettings.sql" />
-    <Build Include="Tables\PurchaseInvoice.sql" />
-    <Build Include="Tables\PurchaseInvoiceDetails.sql" />
-    <Build Include="Tables\PostingDeliveryEntry.sql" />
-    <Build Include="Tables\SalesDetails.sql" />
-    <Build Include="Tables\SalesInvoiceDetails.sql" />
-    <Build Include="Stored Procedures\SPR_Delete_Company.sql" />
-    <Build Include="Stored Procedures\SPR_Get_Company.sql" />
-    <Build Include="Stored Procedures\SPR_Insert_Company.sql" />
-    <Build Include="Stored Procedures\SPR_Update_Company.sql" />
+    <Build Include="Tables\tblPurchaseInvoice.sql" />
+    <Build Include="Tables\tblPurchaseInvoiceDetails.sql" />
+    <Build Include="Tables\tblPostingDeliveryEntry.sql" />
+    <Build Include="Tables\tblSalesDetails.sql" />
+    <Build Include="Tables\tblSalesInvoiceDetails.sql" />
+    <Build Include="Stored Procedures\sp_Delete_CompanyMaster.sql" />
+    <Build Include="Stored Procedures\sp_Get_CompanyMaster.sql" />
+    <Build Include="Stored Procedures\sp_Insert_CompanyMaster.sql" />
+    <Build Include="Stored Procedures\sp_Update_CompanyMaster.sql" />
     <Build Include="Stored Procedures\Get_Product_Master.sql" />
+    <Build Include="Stored Procedures\sp_Get_CustomerMaster.sql" />
+    <Build Include="Stored Procedures\sp_Insert_CustomerMaster.sql" />
+    <Build Include="Stored Procedures\sp_Update_CustomerMaster.sql" />
+    <Build Include="Stored Procedures\sp_Delete_CustomerMaster.sql" />
+    <Build Include="Tables\tblMerchandiserMaster.sql" />
+    <Build Include="Tables\tblMerchandiser_Account.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="IMS_Client_4_DB.refactorlog" />
   </ItemGroup>
 </Project>

@@ -5,8 +5,8 @@
 -- Description:	<Description,,>
 -- =============================================
 --EXEC [dbo].SPR_Delete_Company 0,0,0,0,0,0
-CREATE PROCEDURE [dbo].SPR_Delete_Company
-@CompanyID INT=0
+CREATE PROCEDURE [dbo].sp_Delete_CustomerMaster
+@CustomerID INT=0
 
 AS
 BEGIN
@@ -16,11 +16,11 @@ BEGIN
 
 	BEGIN TRY
 	DECLARE @PARAMERES VARCHAR(MAX)=''
-	SET @PARAMERES=@CompanyID
+	SET @PARAMERES=@CustomerID
 
 	BEGIN TRANSACTION
 
-	DELETE FROM CompanyMaster WHERE CompanyID=@CompanyID
+	DELETE FROM tblCustomerMaster WHERE CustomerID=@CustomerID
 
 	COMMIT
 

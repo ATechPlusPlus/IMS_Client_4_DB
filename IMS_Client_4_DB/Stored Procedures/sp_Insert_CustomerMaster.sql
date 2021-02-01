@@ -1,11 +1,9 @@
-﻿-- =============================================
--- Author:		<AAMIR KHAN>
--- Create date: <11th DEC 2020>
--- Update date: <>
--- Description:	<Description,,>
--- =============================================
---EXEC [dbo].[SPR_Get_Company]
-CREATE PROCEDURE [dbo].[SPR_Get_Company]
+﻿CREATE PROCEDURE [dbo].[sp_Insert_CustomerMaster]
+@CustomerName NVarChar(MAX)=0
+,@PhoneNo NVarChar(MAX)=0
+,@EmailID VarChar(MAX)=0
+,@Address VarChar(MAX)=0
+,@CreatedBy INT=0
 
 AS
 BEGIN
@@ -15,16 +13,27 @@ BEGIN
 
 	BEGIN TRY
 	DECLARE @PARAMERES VARCHAR(MAX)=''
+	SET @PARAMERES=CONCAT(@CustomerName,',',@PhoneNo,',',@EmailID,',',@Address,',',@CreatedBy)
 
-	SELECT CompanyID,CompanyName,[Address],MobileNo,EmailID
-	,(CASE IsDefault WHEN 1 THEN 'Yes' WHEN 0 THEN 'No' END) IsDefault
-	,IsDefault [DefaultValue]
-	FROM dbo.CompanyMaster WITH(NOLOCK)
+	BEGIN TRANSACTION
+
+	INSERT tblCustomerMaster
+	(
+		CustomerName,PhoneNo,EmailID,[Address],CreatedBy
+	)
+	VALUES
+	(
+		@CustomerName,@PhoneNo,@EmailID,@Address,@CreatedBy
+	)
+
+	COMMIT
 
 	END TRY
 
 	BEGIN CATCH
 	
+	ROLLBACK
+
 	INSERT [dbo].[ERROR_Log]
 	(
 	ERR_NUMBER

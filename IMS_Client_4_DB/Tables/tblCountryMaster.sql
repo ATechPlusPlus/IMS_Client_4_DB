@@ -1,5 +1,5 @@
 
-CREATE TABLE [dbo].[CountryMaster](
+CREATE TABLE [dbo].[tblCountryMaster](
 	[CountryID] [int] IDENTITY(1,1) NOT NULL,
 	[CountryCode] [nvarchar](10) NULL,
 	[CountryName] [nvarchar](50) NULL,

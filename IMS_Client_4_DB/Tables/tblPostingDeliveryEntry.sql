@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[PostingDeliveryEntry](
+﻿CREATE TABLE [dbo].[tblPostingDeliveryEntry](
 	[PostingDeliveredID] [int] IDENTITY(1,1) NOT NULL,
 	[EntryType] [int] NOT NULL,
 	[PurchaseInvoiceID] [int] NULL,
