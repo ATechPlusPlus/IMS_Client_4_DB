@@ -6,23 +6,41 @@
 -- =============================================
 --EXEC [dbo].[SPR_Get_Company]
 CREATE PROCEDURE [dbo].[sp_Get_CompanyMaster]
-
+@CompanyName NVARCHAR(MAX)='0',
+@MobileNo NVARCHAR(13)='0'
 AS
 BEGIN
-	-- SET NOCOUNT ON added to prevent extra result sets from
-	-- interfering with SELECT statements.
-	SET NOCOUNT ON;
-
+	
 	BEGIN TRY
 	DECLARE @PARAMERES VARCHAR(MAX)=''
+	SET @PARAMERES = concat(@CompanyName,',',@MobileNo) 
 
-	SELECT CompanyID,CompanyName,[Address],MobileNo,EmailID
-	,(CASE IsDefault WHEN 1 THEN 'Yes' WHEN 0 THEN 'No' END) IsDefault
-	,IsDefault [DefaultValue],CompanyLogo
-	FROM dbo.tblCompanyMaster WITH(NOLOCK)
+	SET NOCOUNT ON;
+	IF @CompanyName = '0' AND @MobileNo = 0
+	BEGIN
 
+	    SELECT CompanyID,CompanyName,[Address],MobileNo,EmailID
+	    ,(CASE IsDefault WHEN 1 THEN 'Yes' WHEN 0 THEN 'No' END) IsDefault
+	    ,IsDefault [DefaultValue],CompanyLogo
+	    FROM dbo.tblCompanyMaster ORDER BY CompanyName
+
+	END
+
+	ELSE
+	BEGIN
+	
+	    SELECT CompanyID,CompanyName,[Address],MobileNo,EmailID
+	    ,(CASE IsDefault WHEN 1 THEN 'Yes' WHEN 0 THEN 'No' END) IsDefault
+	    ,IsDefault [DefaultValue],CompanyLogo
+	    FROM dbo.tblCompanyMaster
+		WHERE 
+		CompanyName LIKE ''+IIF(@CompanyName='0',CompanyName,@CompanyName)+'%' 
+		AND MobileNo LIKE ''+IIF(@MobileNo='0',MobileNo,@MobileNo)+'%'
+		--AND MobileNo = IIF(@MobileNo=0,MobileNo,@MobileNo)
+		ORDER BY CompanyName
+
+	END
 	END TRY
-
 	BEGIN CATCH
 	
 	INSERT [dbo].[ERROR_Log]

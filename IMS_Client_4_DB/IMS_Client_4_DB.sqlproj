@@ -87,13 +87,16 @@
     <Build Include="Stored Procedures\sp_Get_CompanyMaster.sql" />
     <Build Include="Stored Procedures\sp_Insert_CompanyMaster.sql" />
     <Build Include="Stored Procedures\sp_Update_CompanyMaster.sql" />
-    <Build Include="Stored Procedures\Get_Product_Master.sql" />
+    <Build Include="Stored Procedures\sp_Get_Product_Master.sql" />
     <Build Include="Stored Procedures\sp_Get_CustomerMaster.sql" />
     <Build Include="Stored Procedures\sp_Insert_CustomerMaster.sql" />
     <Build Include="Stored Procedures\sp_Update_CustomerMaster.sql" />
     <Build Include="Stored Procedures\sp_Delete_CustomerMaster.sql" />
     <Build Include="Tables\tblMerchandiserMaster.sql" />
     <Build Include="Tables\tblMerchandiser_Account.sql" />
+    <Build Include="Stored Procedures\sp_Insert_Product_Master.sql" />
+    <Build Include="Stored Procedures\sp_Update_Product_Master.sql" />
+    <Build Include="Stored Procedures\sp_Delete_Product_Master.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="IMS_Client_4_DB.refactorlog" />

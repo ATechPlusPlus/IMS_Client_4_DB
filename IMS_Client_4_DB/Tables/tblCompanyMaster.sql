@@ -1,7 +1,7 @@
 
 CREATE TABLE [dbo].[tblCompanyMaster](
 	[CompanyID] [int] IDENTITY(1,1) NOT NULL,
-	[CompanyName] [nvarchar](50) NULL,
+	[CompanyName] [nvarchar](max) NULL,
 	[Address] [nvarchar](max) NULL,
 	[MobileNo] [varchar](13) NULL,
 	[EmailID] [varchar](50) NULL,

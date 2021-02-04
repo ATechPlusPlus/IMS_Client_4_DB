@@ -21,4 +21,39 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="  Merchandiser_AccountID" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="50640b5e-2488-4443-b79a-0e85094535c0" ChangeDateTime="02/03/2021 11:24:33">
+    <Property Name="ElementName" Value="[dbo].[tblProductMaster].[ProductName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblProductMaster]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Barcodes" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1e078a9b-5271-4bbd-82d1-303731b287ff" ChangeDateTime="02/03/2021 11:24:42">
+    <Property Name="ElementName" Value="[dbo].[tblProductMaster].[ProductArabicName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblProductMaster]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProductName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2b1891a1-7822-44b8-8eda-3174451f1605" ChangeDateTime="02/03/2021 11:25:01">
+    <Property Name="ElementName" Value="[dbo].[tblProductMaster].[CategoryID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblProductMaster]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Weight" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="113db1ea-9df5-49fd-a07c-059dd56a1a2d" ChangeDateTime="02/03/2021 11:26:01">
+    <Property Name="ElementName" Value="[dbo].[tblProductMaster].[Rate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblProductMaster]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Packs" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c0874f0c-ed30-41f5-837d-e9afadfe9cc5" ChangeDateTime="02/03/2021 11:26:49">
+    <Property Name="ElementName" Value="[dbo].[tblProductMaster].[Photo]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblProductMaster]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UnitPrice" />
+  </Operation>
 </Operations>
