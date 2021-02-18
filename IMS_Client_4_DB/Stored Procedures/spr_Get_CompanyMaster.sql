@@ -5,7 +5,7 @@
 -- Description:	<Description,,>
 -- =============================================
 --EXEC [dbo].[SPR_Get_Company]
-CREATE PROCEDURE [dbo].[sp_Get_CompanyMaster]
+CREATE PROCEDURE [dbo].[spr_Get_CompanyMaster]
 @CompanyName NVARCHAR(MAX)='0',
 @MobileNo NVARCHAR(13)='0'
 AS

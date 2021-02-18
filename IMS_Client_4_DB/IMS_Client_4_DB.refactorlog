@@ -56,4 +56,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="UnitPrice" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="23e8e666-58eb-41de-90e6-0f9174dab706" ChangeDateTime="02/16/2021 12:17:03">
+    <Property Name="ElementName" Value="[dbo].[tblMerchandiser_Account].[AccountID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblMerchandiser_Account]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CustID_AccountID" />
+  </Operation>
 </Operations>

@@ -5,7 +5,7 @@
 -- Description:	<Description,,>
 -- =============================================
 --EXEC Get_Product_Master 'b',3
-CREATE PROCEDURE [dbo].[sp_Get_Product_Master]
+CREATE PROCEDURE [dbo].[spr_Get_Product_Master]
 @ProductName NVARCHAR(100)='0'
 AS
 BEGIN

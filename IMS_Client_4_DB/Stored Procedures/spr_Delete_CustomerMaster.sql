@@ -4,15 +4,9 @@
 -- Update date: <>
 -- Description:	<Description,,>
 -- =============================================
---EXEC [dbo].[SPR_Insert_Company] 0,0,0,0,0,0
-CREATE PROCEDURE [dbo].[sp_Insert_CompanyMaster]
-@CompanyName NVarChar(MAX)=0
-,@Address NVarChar(MAX)=0
-,@MobileNo VarChar(MAX)=0
-,@EmailID VarChar(MAX)=0
-,@IsDefault BIT=0
-,@CompanyLogo VARBINARY(MAX)=0
-,@CreatedBy INT=0
+--EXEC [dbo].SPR_Delete_Company 0,0,0,0,0,0
+CREATE PROCEDURE [dbo].spr_Delete_CustomerMaster
+@CustomerID INT=0
 
 AS
 BEGIN
@@ -22,18 +16,11 @@ BEGIN
 
 	BEGIN TRY
 	DECLARE @PARAMERES VARCHAR(MAX)=''
-	SET @PARAMERES=CONCAT(@CompanyName,',',@Address,',',@MobileNo,',',@EmailID,',',@IsDefault,',',@CompanyLogo,',',@CreatedBy)
+	SET @PARAMERES=@CustomerID
 
 	BEGIN TRANSACTION
 
-	INSERT tblCompanyMaster
-	(
-		CompanyName,[Address],MobileNo,EmailID,IsDefault,CompanyLogo,CreatedBy
-	)
-	VALUES
-	(
-		@CompanyName,@Address,@MobileNo,@EmailID,@IsDefault,@CompanyLogo,@CreatedBy
-	)
+	DELETE FROM tblCustomerMaster WHERE CustomerID=@CustomerID
 
 	COMMIT
 

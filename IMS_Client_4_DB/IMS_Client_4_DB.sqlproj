@@ -67,7 +67,7 @@
     <Build Include="Tables\BackupConfig.sql" />
     <Build Include="Tables\ERROR_Log.sql" />
     <Build Include="Tables\tblLogin_History.sql" />
-    <Build Include="Tables\tblRegistrationDetails.sql" />
+    <Build Include="Tables\RegistrationDetails.sql" />
     <Build Include="Tables\UserManagement.sql" />
     <Build Include="Tables\tblCompanyMaster.sql" />
     <Build Include="Tables\tblCountryMaster.sql" />
@@ -83,20 +83,20 @@
     <Build Include="Tables\tblPostingDeliveryEntry.sql" />
     <Build Include="Tables\tblSalesDetails.sql" />
     <Build Include="Tables\tblSalesInvoiceDetails.sql" />
-    <Build Include="Stored Procedures\sp_Delete_CompanyMaster.sql" />
-    <Build Include="Stored Procedures\sp_Get_CompanyMaster.sql" />
-    <Build Include="Stored Procedures\sp_Insert_CompanyMaster.sql" />
-    <Build Include="Stored Procedures\sp_Update_CompanyMaster.sql" />
-    <Build Include="Stored Procedures\sp_Get_Product_Master.sql" />
-    <Build Include="Stored Procedures\sp_Get_CustomerMaster.sql" />
-    <Build Include="Stored Procedures\sp_Insert_CustomerMaster.sql" />
-    <Build Include="Stored Procedures\sp_Update_CustomerMaster.sql" />
-    <Build Include="Stored Procedures\sp_Delete_CustomerMaster.sql" />
+    <Build Include="Stored Procedures\spr_Delete_CompanyMaster.sql" />
+    <Build Include="Stored Procedures\spr_Get_CompanyMaster.sql" />
+    <Build Include="Stored Procedures\spr_Insert_CompanyMaster.sql" />
+    <Build Include="Stored Procedures\spr_Update_CompanyMaster.sql" />
+    <Build Include="Stored Procedures\spr_Get_Product_Master.sql" />
+    <Build Include="Stored Procedures\spr_Get_CustomerMaster.sql" />
+    <Build Include="Stored Procedures\spr_Insert_CustomerMaster.sql" />
+    <Build Include="Stored Procedures\spr_Update_CustomerMaster.sql" />
+    <Build Include="Stored Procedures\spr_Delete_CustomerMaster.sql" />
     <Build Include="Tables\tblMerchandiserMaster.sql" />
     <Build Include="Tables\tblMerchandiser_Account.sql" />
-    <Build Include="Stored Procedures\sp_Insert_Product_Master.sql" />
-    <Build Include="Stored Procedures\sp_Update_Product_Master.sql" />
-    <Build Include="Stored Procedures\sp_Delete_Product_Master.sql" />
+    <Build Include="Stored Procedures\spr_Insert_Product_Master.sql" />
+    <Build Include="Stored Procedures\spr_Update_Product_Master.sql" />
+    <Build Include="Stored Procedures\spr_Delete_Product_Master.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="IMS_Client_4_DB.refactorlog" />

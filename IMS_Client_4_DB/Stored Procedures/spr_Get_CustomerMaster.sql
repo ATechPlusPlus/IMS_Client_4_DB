@@ -1,9 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[sp_Insert_CustomerMaster]
-@CustomerName NVarChar(MAX)=0
-,@PhoneNo NVarChar(MAX)=0
-,@EmailID VarChar(MAX)=0
-,@Address VarChar(MAX)=0
-,@CreatedBy INT=0
+﻿CREATE PROCEDURE [dbo].[spr_Get_CustomerMaster]
 
 AS
 BEGIN
@@ -13,27 +8,14 @@ BEGIN
 
 	BEGIN TRY
 	DECLARE @PARAMERES VARCHAR(MAX)=''
-	SET @PARAMERES=CONCAT(@CustomerName,',',@PhoneNo,',',@EmailID,',',@Address,',',@CreatedBy)
 
-	BEGIN TRANSACTION
-
-	INSERT tblCustomerMaster
-	(
-		CustomerName,PhoneNo,EmailID,[Address],CreatedBy
-	)
-	VALUES
-	(
-		@CustomerName,@PhoneNo,@EmailID,@Address,@CreatedBy
-	)
-
-	COMMIT
+	SELECT CustomerID,CustomerName,PhoneNo,EmailID,[Address]
+	FROM dbo.tblCustomerMaster WITH(NOLOCK)
 
 	END TRY
 
 	BEGIN CATCH
 	
-	ROLLBACK
-
 	INSERT [dbo].[ERROR_Log]
 	(
 	ERR_NUMBER

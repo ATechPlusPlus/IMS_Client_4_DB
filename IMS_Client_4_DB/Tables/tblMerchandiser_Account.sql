@@ -6,6 +6,6 @@
     [AccountID] INT NULL, 
     [CreatedBy] INT NULL, 
     [CreatedOn] DATETIME NULL, 
-    [UpdateBy] INT NULL, 
-    [UpdateOn] DATETIME NULL
+    [UpdatedBy] INT NULL, 
+    [UpdatedOn] DATETIME NULL
 )

@@ -1,4 +1,12 @@
-﻿CREATE PROCEDURE [dbo].[sp_Get_CustomerMaster]
+﻿-- =============================================
+-- Author:		<AAMIR KHAN>
+-- Create date: <11th DEC 2020>
+-- Update date: <>
+-- Description:	<Description,,>
+-- =============================================
+--EXEC [dbo].SPR_Delete_Company 0,0,0,0,0,0
+CREATE PROCEDURE [dbo].spr_Delete_CompanyMaster
+@CompanyID INT=0
 
 AS
 BEGIN
@@ -8,14 +16,20 @@ BEGIN
 
 	BEGIN TRY
 	DECLARE @PARAMERES VARCHAR(MAX)=''
+	SET @PARAMERES=@CompanyID
 
-	SELECT CustomerID,CustomerName,PhoneNo,EmailID,[Address]
-	FROM dbo.tblCustomerMaster WITH(NOLOCK)
+	BEGIN TRANSACTION
+
+	DELETE FROM tblCompanyMaster WHERE CompanyID=@CompanyID
+
+	COMMIT
 
 	END TRY
 
 	BEGIN CATCH
 	
+	ROLLBACK
+
 	INSERT [dbo].[ERROR_Log]
 	(
 	ERR_NUMBER

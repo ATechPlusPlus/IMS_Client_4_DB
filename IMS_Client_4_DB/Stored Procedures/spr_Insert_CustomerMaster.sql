@@ -1,5 +1,9 @@
-﻿CREATE PROCEDURE [dbo].[sp_Delete_Product_Master]
-@ProductID INT=0
+﻿CREATE PROCEDURE [dbo].[spr_Insert_CustomerMaster]
+@CustomerName NVarChar(MAX)=0
+,@PhoneNo NVarChar(MAX)=0
+,@EmailID VarChar(MAX)=0
+,@Address VarChar(MAX)=0
+,@CreatedBy INT=0
 
 AS
 BEGIN
@@ -9,11 +13,18 @@ BEGIN
 
 	BEGIN TRY
 	DECLARE @PARAMERES VARCHAR(MAX)=''
-	SET @PARAMERES=@ProductID
+	SET @PARAMERES=CONCAT(@CustomerName,',',@PhoneNo,',',@EmailID,',',@Address,',',@CreatedBy)
 
 	BEGIN TRANSACTION
 
-	DELETE FROM tblProductMaster WHERE ProductID=@ProductID
+	INSERT tblCustomerMaster
+	(
+		CustomerName,PhoneNo,EmailID,[Address],CreatedBy
+	)
+	VALUES
+	(
+		@CustomerName,@PhoneNo,@EmailID,@Address,@CreatedBy
+	)
 
 	COMMIT
 

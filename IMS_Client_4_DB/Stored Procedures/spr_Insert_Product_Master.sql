@@ -1,14 +1,12 @@
-﻿CREATE PROCEDURE [dbo].[sp_Update_Product_Master]
-@ProductID INT=0
-,@Barcodes NVarChar(50)=0
+﻿CREATE PROCEDURE [dbo].[spr_Insert_Product_Master]
+@Barcodes NVarChar(50)=0
 ,@ProductName NVarChar(MAX)=0
 ,@Weight VarChar(50)=0
 ,@Packs INT=0
 ,@UnitPrice DECIMAL(18,3)=0
 ,@CartonPrice DECIMAL(18,3)=0
 ,@ActiveStatus VarChar(MAX)=0
-,@UpdatedBy INT=0
-
+,@CreatedBy INT=0
 
 AS
 BEGIN
@@ -18,14 +16,18 @@ BEGIN
 
 	BEGIN TRY
 	DECLARE @PARAMERES VARCHAR(MAX)=''
-	SET @PARAMERES=CONCAT(@ProductID,',',@Barcodes,',',@ProductName,',',@Weight,',',@Packs,',',@UnitPrice,',',@CartonPrice,',',@ActiveStatus,',',@UpdatedBy)
+	SET @PARAMERES=CONCAT(@Barcodes,',',@ProductName,',',@Weight,',',@Packs,',',@UnitPrice,',',@CartonPrice,',',@ActiveStatus,',',@CreatedBy)
 
 	BEGIN TRANSACTION
 
-	UPDATE tblProductMaster
-	SET Barcodes=@Barcodes,ProductName=@ProductName,[Weight]=@Weight,Packs=@Packs,UnitPrice=@UnitPrice
-	,CartonPrice=@CartonPrice,ActiveStatus=@ActiveStatus,UpdatedBy=@UpdatedBy,UpdatedOn=GETDATE()
-	WHERE ProductID=@ProductID
+	INSERT tblProductMaster
+	(
+		Barcodes,ProductName,[Weight],Packs,UnitPrice,CartonPrice,ActiveStatus,CreatedBy
+	)
+	VALUES
+	(
+		@Barcodes,@ProductName,@Weight,@Packs,@UnitPrice,@CartonPrice,@ActiveStatus,@CreatedBy
+	)
 
 	COMMIT
 

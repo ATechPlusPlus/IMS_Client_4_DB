@@ -1,12 +1,5 @@
-﻿-- =============================================
--- Author:		<AAMIR KHAN>
--- Create date: <11th DEC 2020>
--- Update date: <>
--- Description:	<Description,,>
--- =============================================
---EXEC [dbo].SPR_Delete_Company 0,0,0,0,0,0
-CREATE PROCEDURE [dbo].sp_Delete_CompanyMaster
-@CompanyID INT=0
+﻿CREATE PROCEDURE [dbo].[spr_Delete_Product_Master]
+@ProductID INT=0
 
 AS
 BEGIN
@@ -16,11 +9,11 @@ BEGIN
 
 	BEGIN TRY
 	DECLARE @PARAMERES VARCHAR(MAX)=''
-	SET @PARAMERES=@CompanyID
+	SET @PARAMERES=@ProductID
 
 	BEGIN TRANSACTION
 
-	DELETE FROM tblCompanyMaster WHERE CompanyID=@CompanyID
+	DELETE FROM tblProductMaster WHERE ProductID=@ProductID
 
 	COMMIT
 

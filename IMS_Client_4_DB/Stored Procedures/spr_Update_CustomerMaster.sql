@@ -5,14 +5,12 @@
 -- Description:	<Description,,>
 -- =============================================
 --EXEC [dbo].SPR_Update_Company 0,0,0,0,0,0
-CREATE PROCEDURE [dbo].sp_Update_CompanyMaster
-@CompanyID INT=0
-,@CompanyName NVarChar(MAX)=0
-,@Address NVarChar(MAX)=0
-,@MobileNo VarChar(MAX)=0
+CREATE PROCEDURE [dbo].[spr_Update_CustomerMaster]
+@CustomerID INT=0
+,@CustomerName NVarChar(MAX)=0
+,@PhoneNo NVarChar(MAX)=0
 ,@EmailID VarChar(MAX)=0
-,@IsDefault BIT=0
-,@CompanyLogo VARBINARY(MAX)=0
+,@Address VarChar(MAX)=0
 ,@UpdatedBy INT=0
 
 AS
@@ -23,15 +21,14 @@ BEGIN
 
 	BEGIN TRY
 	DECLARE @PARAMERES VARCHAR(MAX)=''
-	SET @PARAMERES=CONCAT(@CompanyID,',',@CompanyName,',',@Address,',',@MobileNo,',',@EmailID,',',@IsDefault,',',@CompanyLogo,',',@UpdatedBy)
+	SET @PARAMERES=CONCAT(@CustomerID,',',@CustomerName,',',@PhoneNo,',',@EmailID,',',@Address,',',@UpdatedBy)
 
 	BEGIN TRANSACTION
 
-	UPDATE tblCompanyMaster
-	SET CompanyName=@CompanyName,[Address]=@Address,MobileNo=@MobileNo
-	,EmailID=@EmailID,IsDefault=@IsDefault,CompanyLogo=@CompanyLogo
-	,UpdatedBy=@UpdatedBy,UpdatedOn=GETDATE()
-	WHERE CompanyID=@CompanyID
+	UPDATE tblCustomerMaster
+	SET CustomerName=@CustomerName,PhoneNo=@PhoneNo,EmailID=@EmailID
+	,[Address]=@Address,UpdatedBy=@UpdatedBy,UpdatedOn=GETDATE()
+	WHERE CustomerID=@CustomerID
 
 	COMMIT
 
